@@ -6,7 +6,9 @@ import { validationMiddleware } from "../validationMiddleware";
 const route = Router();
 
 const email = new Email();
-
-route.post('/send-email', validationMiddleware(userSchema), email.sendEmail);
+route.get('/', (req, res) => {
+    res.send('Hello world');
+});
+route.post('/api/send-email', validationMiddleware(userSchema), email.sendEmail);
 
 export { route };

@@ -9,13 +9,13 @@ const app = express();
 
 const corsOptions: CorsOptions = {
     origin: process.env.URL,
-    methods: ['POST']
+    methods: ['POST', "GET"]
 }
 
 app.use(cors(corsOptions));
 
 app.use(express.json());
 
-app.use('/api/', route);
+app.use('/', route);
 
 app.listen(process.env.APP_PORT, () => console.log('Servidor na porta ' + process.env.APP_PORT));
