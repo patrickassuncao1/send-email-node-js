@@ -2,7 +2,7 @@
   "name": "send-email-node",
   "version": "1.0.0",
   "description": "Enviar email",
-  "main": "./dist/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",
